@@ -1,0 +1,13 @@
+import requests
+
+url = "https://reqres.in/api/users"  # Example API endpoint
+
+# Read Python file
+with open("api_server.py", "r") as f:
+    file_content = f.read()
+
+# Send the file content as JSON
+response = requests.post(url, json={"filename": "api_server.py", "content": file_content})
+
+print(response.status_code)
+print(response.json())
