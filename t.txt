@@ -201,3 +201,5 @@ docker run -d --name gitea-restart \
 * Lifecycle (stop, start, rm, rmi)
 
 With **just Gitea**, you covered almost everything that can appear in a Docker hands-on exam 🚀
+
+sed -n '10,20p' text.txt
