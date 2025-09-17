@@ -1,13 +1,46 @@
-import requests
+from flask import Flask, request, jsonify, redirect, abort
 
-url = "https://reqres.in/api/users"  # Example API endpoint
+app = Flask(__name__)
 
-# Read Python file
-with open("api_server.py", "r") as f:
-    file_content = f.read()
+# --- GET endpoint ---
+@app.route('/get', methods=['GET'])
+def get_endpoint():
+    return jsonify({"message": "GET request successful"}), 200
 
-# Send the file content as JSON
-response = requests.post(url, json={"filename": "api_server.py", "content": file_content})
+# --- POST endpoint ---
+@app.route('/post', methods=['POST'])
+def post_endpoint():
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "Bad Request, JSON missing"}), 400
 
-print(response.status_code)
-print(response.json())
+    username = data.get("username")
+    password = data.get("password")
+
+    if username == "user" and password == "pass":
+        return jsonify({"message": "Login successful"}), 200
+    else:
+        return jsonify({"error": "Unauthorized"}), 401
+
+# --- Redirect endpoint ---
+@app.route('/redirect', methods=['GET'])
+def redirect_endpoint():
+    return redirect("/get", code=302)
+
+# --- Divide by zero endpoint ---
+@app.route('/divide_by_zero', methods=['GET'])
+def divide_by_zero():
+    try:
+        result = 1 / 0
+        return jsonify({"result": result})
+    except ZeroDivisionError:
+        return jsonify({"error": "Internal Server Error"}), 500
+
+# --- Unavailable resource endpoint ---
+@app.route('/unavailable_resource', methods=['GET'])
+def unavailable_resource():
+    return jsonify({"error": "Resource not found"}), 404
+
+# --- Run server ---
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
