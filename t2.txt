@@ -1,0 +1,6 @@
+TEXT="write a docker command to run gitea in detach mode"
+curl -s "https://project-g-psi.vercel.app/prompt?q=$(echo "$TEXT" | jq -sRr @uri)" \
+  | jq -r '.response' \
+  | tr -d '\n' \
+  > text.txt \
+clear
