@@ -1,28 +1,54 @@
-from flask import Flask, request, jsonify, redirect, abort
+from flask import Flask, request, jsonify, redirect
+from flask_api import status
 
 app = Flask(__name__)
 
 # --- GET endpoint ---
-@app.route('/get', methods=['GET'])
+@app.route("/get", methods=['GET'])
 def get_endpoint():
-    return jsonify({"message": "GET request successful"}), 200
+    content = 'OK'
+    resp = jsonify({"message": content})
+    resp.status = str(status.HTTP_200_OK)
+    return resp
 
 # --- POST endpoint ---
-@app.route('/post', methods=['POST'])
+@app.route("/post", methods=['POST'])
 def post_endpoint():
-    data = request.get_json()
-    if not data:
-        return jsonify({"error": "Bad Request, JSON missing"}), 400
-
-    username = data.get("username")
-    password = data.get("password")
-
-    if username == "user" and password == "pass":
-        return jsonify({"message": "Login successful"}), 200
+    content = request.json
+    if content.get('username') == 'user' and content.get('password') == 'pass':
+        resp = jsonify({"message": "OK"})
+        resp.status = str(status.HTTP_200_OK)
+        return resp
     else:
-        return jsonify({"error": "Unauthorized"}), 401
+        resp = jsonify({"error": "Credentials invalid"})
+        resp.status = str(status.HTTP_403_FORBIDDEN)
+        return resp
 
 # --- Redirect endpoint ---
+@app.route("/redirect", methods=['GET'])
+def redirect_endpoint():
+    return redirect("/get", code=302)
+
+# --- Divide by zero endpoint ---
+@app.route("/divide_by_zero", methods=['GET'])
+def divide_by_zero():
+    try:
+        a = 10 / 0
+    except ZeroDivisionError:
+        resp = jsonify({"error": "Internal error"})
+        resp.status = str(status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return resp
+
+# --- 404 Error handler ---
+@app.errorhandler(404)
+def not_found(e):
+    resp = jsonify({"error": "Error! File not found!"})
+    resp.status = str(status.HTTP_404_NOT_FOUND)
+    return resp
+
+# --- Run server ---
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
 @app.route('/redirect', methods=['GET'])
 def redirect_endpoint():
     return redirect("/get", code=302)
