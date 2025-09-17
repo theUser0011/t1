@@ -1,0 +1,203 @@
+# 🐳 Docker Hands-On Practice with Gitea (Step by Step)
+
+We will use **Gitea** (a lightweight Git hosting tool) to practice all Docker concepts.
+
+---
+
+## Step 1 – Pull Image
+
+```bash
+docker pull gitea/gitea:main-nightly
+```
+
+➡️ This downloads the latest **nightly build** of Gitea from Docker Hub.
+Think of it like “installing” the app image locally.
+
+---
+
+## Step 2 – Run Container with Ports & Volumes
+
+```bash
+mkdir -p gitea-data
+docker run -d --name gitea \
+  -p 3000:3000 -p 222:22 \
+  -v $(pwd)/gitea-data:/data \
+  gitea/gitea:main-nightly
+```
+
+➡️ What this does:
+
+* `-d` → run in background (detached).
+* `--name gitea` → give container a name.
+* `-p 3000:3000` → web access on [http://localhost:3000](http://localhost:3000).
+* `-p 222:22` → SSH access for Git.
+* `-v ./gitea-data:/data` → store data **persistently** on your host.
+
+---
+
+## Step 3 – Enter Container & Change Permissions
+
+```bash
+docker exec -it gitea /bin/bash
+chmod 755 /data
+exit
+```
+
+➡️ Here:
+
+* `exec -it` → open a terminal inside container.
+* `chmod 755` → change folder permissions.
+* `exit` → leave container.
+
+---
+
+## Step 4 – Check Logs & Container Info
+
+```bash
+docker logs gitea
+docker inspect gitea
+```
+
+➡️
+
+* `logs` → see what’s happening inside the container.
+* `inspect` → detailed JSON with config, volumes, IP, env variables.
+
+---
+
+## Step 5 – Networking
+
+1. Create a custom network:
+
+   ```bash
+   docker network create gitea-net
+   ```
+
+   ➡️ This is like creating a private LAN for containers.
+
+2. Run Gitea in that network:
+
+   ```bash
+   docker run -d --name gitea-net \
+     --network gitea-net \
+     -p 3001:3000 -p 223:22 \
+     -v $(pwd)/gitea-data:/data \
+     gitea/gitea:main-nightly
+   ```
+
+   ➡️ Now Gitea lives inside `gitea-net`.
+
+3. Add a MySQL DB in same network:
+
+   ```bash
+   docker run -d --name gitea-db \
+     --network gitea-net \
+     -e MYSQL_ROOT_PASSWORD=root \
+     -e MYSQL_DATABASE=gitea \
+     mysql:5.7
+   ```
+
+   ➡️ Both Gitea and MySQL can now “talk” directly inside the same network.
+
+---
+
+## Step 6 – Copy Files Between Host & Container
+
+* Copy from host → container:
+
+  ```bash
+  docker cp notes.txt gitea:/data/
+  ```
+* Copy from container → host:
+
+  ```bash
+  docker cp gitea:/etc/gitea/app.ini ./app.ini
+  ```
+
+➡️ Useful when you want to upload/download files.
+
+---
+
+## Step 7 – Use Environment Variables
+
+```bash
+docker run -d --name gitea-env \
+  -e USER_UID=1000 -e USER_GID=1000 \
+  -p 3002:3000 -p 224:22 \
+  -v $(pwd)/gitea-data:/data \
+  gitea/gitea:main-nightly
+```
+
+➡️ `-e` lets you pass custom settings into the container (like configs).
+
+---
+
+## Step 8 – Apply Resource Limits
+
+```bash
+docker run -d --name gitea-limited \
+  --memory="512m" --cpus="0.5" \
+  -p 3003:3000 \
+  -v $(pwd)/gitea-data:/data \
+  gitea/gitea:main-nightly
+```
+
+➡️ This restricts the container to **512MB RAM** and **half CPU core**.
+
+---
+
+## Step 9 – Restart Policies
+
+```bash
+docker run -d --name gitea-restart \
+  --restart always \
+  -p 3004:3000 \
+  -v $(pwd)/gitea-data:/data \
+  gitea/gitea:main-nightly
+```
+
+➡️ `--restart always` makes sure container restarts automatically if system reboots.
+
+---
+
+## Step 10 – Container Lifecycle
+
+* Stop container:
+
+  ```bash
+  docker stop gitea
+  ```
+* Start container:
+
+  ```bash
+  docker start gitea
+  ```
+* Remove container:
+
+  ```bash
+  docker rm -f gitea
+  ```
+* Remove image:
+
+  ```bash
+  docker rmi gitea/gitea:main-nightly
+  ```
+
+➡️ These commands let you manage container **life cycle**.
+
+---
+
+# ✅ What You Practiced
+
+* Pull image
+* Run with ports + volumes
+* Enter container & change permissions
+* Logs & inspect
+* Networking with DB
+* Copy files
+* Environment variables
+* Resource limits
+* Restart policies
+* Lifecycle (stop, start, rm, rmi)
+
+With **just Gitea**, you covered almost everything that can appear in a Docker hands-on exam 🚀
