@@ -4,3 +4,20 @@ curl -s "https://project-g-psi.vercel.app/prompt?q=$(echo "$TEXT" | jq -sRr @uri
   | tr -d '\n' \
   > text.txt \
 clear
+
+gprompt() {
+  local TEXT="$1"
+  local MSG="no explanation requirement when giving comments give small and less than one line comments"
+
+  (
+    curl -s "https://project-g-psi.vercel.app/prompt?q=$(echo "$TEXT $MSG" | jq -sRr @uri)" \
+      | jq -r '.response' \
+      | tr -d '\n' \
+      > text.txt && clear
+  ) &
+}
+
+
+source ~/.bashrc
+
+gprompt "write a docker command to run gitea in detach mode"
