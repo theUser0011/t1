@@ -1,0 +1,36 @@
+                   ┌──────────────────┐
+                   |      DevOps (2)  |
+                   |  CI/CD, Docker   |
+                   |  Deploy, Monitor |
+                   └─────────┬────────┘
+                             │
+─────────────────────────────┼─────────────────────────────
+                             │
+           ┌─────────────────┴─────────────────┐
+           │                                   │
+┌──────────▼───────────┐             ┌─────────▼───────────┐
+|   Backend (11)       |             |   Frontend (9)      |
+|-----------------------|             |---------------------|
+| Core (6)              |             | Core (6)            |
+| - APIs (Django)       |             | - React UI/UX       |
+| - Database            |             | - Components        |
+| - Auth                |             | - Connect APIs      |
+|                       |             |                     |
+| AIML + Backend (3)    |             | AIML + Frontend (2) |
+| - Integrate AI models |             | - AI chatbot widget |
+| - Expose AI APIs      |             | - Recommendations   |
+|                       |             |                     |
+| Security + Backend(2) |             | Security + Frontend(1)|
+| - garak vuln scans    |             | - XSS/CSRF testing  |
+| - Secure endpoints    |             | - Token handling    |
+└──────────┬───────────┘             └─────────┬───────────┘
+           │                                   │
+           └───────────────┬───────────────────┘
+                           │
+                ┌──────────▼───────────┐
+                |       AIML Team      |
+                | (Backend + Frontend) |
+                | - Train/test models  |
+                | - AI pipelines       |
+                | - Predictions        |
+                └──────────────────────┘
