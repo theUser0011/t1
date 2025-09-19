@@ -1,0 +1,656 @@
+\[
+{
+"question": "Which of the following is a valid variable name in Python?",
+"options": \["2var", "my\_var", "my-var", "class"],
+"answer": "my\_var"
+},
+{
+"question": "What will be the output of: x = 5; y = 2; print(x % y)?",
+"options": \["2", "1", "2.5", "0"],
+"answer": "1"
+},
+{
+"question": "Which operator is used for exponentiation in Python?",
+"options": \["^", "**", "//", "exp"],
+"answer": "**"
+},
+{
+"question": "What is the result of: 10 // 3?",
+"options": \["3.3", "3", "4", "Error"],
+"answer": "3"
+},
+{
+"question": "Which operator has the highest precedence?",
+"options": \["*", "+", "**", "//"],
+"answer": "**"
+},
+{
+"question": "What will be printed: x = 5; x += 3; print(x)?",
+"options": \["5", "8", "3", "Error"],
+"answer": "8"
+},
+{
+"question": "What does x = x \* 2 + 1 equal if x=3?",
+"options": \["5", "7", "6", "Error"],
+"answer": "7"
+},
+{
+"question": "Which operator checks identity in Python?",
+"options": \["==", "is", "!=", "==="],
+"answer": "is"
+},
+{
+"question": "What is the result of: True + False?",
+"options": \["1", "0", "True", "False"],
+"answer": "1"
+},
+{
+"question": "Which operator is right-associative?",
+"options": \["+", "-", "**", "//"],
+"answer": "**"
+},
+{
+"question": "What is the result of: 5 & 3?",
+"options": \["7", "1", "15", "2"],
+"answer": "1"
+},
+{
+"question": "Which of these is not a valid assignment?",
+"options": \["x, y = 1, 2", "x = y = 3", "x == 4", "x = 5"],
+"answer": "x == 4"
+},
+{
+"question": "What is the type of 5 / 2?",
+"options": \["int", "float", "decimal", "Error"],
+"answer": "float"
+},
+{
+"question": "What does \~5 return?",
+"options": \["-5", "-6", "5", "Error"],
+"answer": "-6"
+},
+{
+"question": "What is the result of divmod(7, 3)?",
+"options": \["(2, 1)", "(3, 1)", "(2, 2)", "Error"],
+"answer": "(2, 1)"
+},
+{
+"question": "If x=5 and y=10, what does (x\<y) and (y<20) evaluate to?",
+"options": \["True", "False", "None", "Error"],
+"answer": "True"
+},
+{
+"question": "Which operator returns the memory address identity?",
+"options": \["==", "is", "&", "id"],
+"answer": "is"
+},
+{
+"question": "What is the result of: 2 \*\* 3 \*\* 2?",
+"options": \["64", "512", "16", "Error"],
+"answer": "512"
+},
+{
+"question": "Which assignment is valid?",
+"options": \["1x = 5", "\_y = 10", "my-var = 3", "def = 2"],
+"answer": "\_y = 10"
+},
+{
+"question": "Which operator has lower precedence than logical 'and'?",
+"options": \["or", "not", "==", "+"],
+"answer": "or"
+},
+{
+"question": "Which function is used to find the length of a string?",
+"options": \["count()", "len()", "length()", "size()"],
+"answer": "len()"
+},
+{
+"question": "What will 'hello' + 'world' output?",
+"options": \["hello world", "helloworld", "Error", "hello+world"],
+"answer": "helloworld"
+},
+{
+"question": "Which method converts string to uppercase?",
+"options": \["upper()", "uppercase()", "toUpper()", "UPPER()"],
+"answer": "upper()"
+},
+{
+"question": "How do you access first character of string s?",
+"options": \["s\[1]", "s\[0]", "s\[-1]", "s.first()"],
+"answer": "s\[0]"
+},
+{
+"question": "Which operator repeats a string?",
+"options": \["*", "+", "-", "%"],
+"answer": "*"
+},
+{
+"question": "What is 'Python'\[1:4]?",
+"options": \["yth", "ytho", "Pyt", "hon"],
+"answer": "yth"
+},
+{
+"question": "Which method checks if string starts with prefix?",
+"options": \["startswith()", "endswith()", "start()", "prefix()"],
+"answer": "startswith()"
+},
+{
+"question": "What will 'abc'.find('b') return?",
+"options": \["1", "0", "-1", "Error"],
+"answer": "1"
+},
+{
+"question": "What is the result of 'a' \* 3?",
+"options": \["aaa", "a3", "Error", "3a"],
+"answer": "aaa"
+},
+{
+"question": "What is 'Hello'.lower()?",
+"options": \["HELLO", "hello", "Hello", "Error"],
+"answer": "hello"
+},
+{
+"question": "'Python'\[::-1] gives?",
+"options": \["nohtyP", "Python", "Error", "None"],
+"answer": "nohtyP"
+},
+{
+"question": "Which string method removes whitespace?",
+"options": \["trim()", "strip()", "remove()", "rstrip()"],
+"answer": "strip()"
+},
+{
+"question": "What is '123'.isdigit()?",
+"options": \["True", "False", "Error", "None"],
+"answer": "True"
+},
+{
+"question": "What does '{} {}'.format('a','b') return?",
+"options": \["a b", "ab", "b a", "Error"],
+"answer": "a b"
+},
+{
+"question": "f"{2+3}" evaluates to?",
+"options": \["5", "23", "Error", "None"],
+"answer": "5"
+},
+{
+"question": "Which operator is invalid on strings?",
+"options": \["+", "*", "-", "in"],
+"answer": "-"
+},
+{
+"question": "'Python'.replace('P','J')?",
+"options": \["Jython", "Python", "Pthon", "Error"],
+"answer": "Jython"
+},
+{
+"question": "'a' in 'cat' returns?",
+"options": \["True", "False", "None", "Error"],
+"answer": "True"
+},
+{
+"question": "Which string method splits into list?",
+"options": \["split()", "slice()", "list()", "cut()"],
+"answer": "split()"
+},
+{
+"question": "What does ''.join(\['a','b','c']) return?",
+"options": \["abc", "a b c", "\['a','b','c']", "Error"],
+"answer": "abc"
+},
+  \[
+{
+"question": "Which of the following is a valid variable name in Python?",
+"options": \["2var", "my\_var", "my-var", "class"],
+"answer": "my\_var"
+},
+{
+"question": "What will be the output of: x = 5; y = 2; print(x % y)?",
+"options": \["2", "1", "2.5", "0"],
+"answer": "1"
+},
+{
+"question": "Which operator is used for exponentiation in Python?",
+"options": \["^", "**", "//", "exp"],
+"answer": "**"
+},
+{
+"question": "What is the result of: 10 // 3?",
+"options": \["3.3", "3", "4", "Error"],
+"answer": "3"
+},
+{
+"question": "Which operator has the highest precedence?",
+"options": \["*", "+", "**", "//"],
+"answer": "**"
+},
+{
+"question": "What will be printed: x = 5; x += 3; print(x)?",
+"options": \["5", "8", "3", "Error"],
+"answer": "8"
+},
+{
+"question": "What does x = x \* 2 + 1 equal if x=3?",
+"options": \["5", "7", "6", "Error"],
+"answer": "7"
+},
+{
+"question": "Which operator checks identity in Python?",
+"options": \["==", "is", "!=", "==="],
+"answer": "is"
+},
+{
+"question": "What is the result of: True + False?",
+"options": \["1", "0", "True", "False"],
+"answer": "1"
+},
+{
+"question": "Which operator is right-associative?",
+"options": \["+", "-", "**", "//"],
+"answer": "**"
+},
+{
+"question": "What is the result of: 5 & 3?",
+"options": \["7", "1", "15", "2"],
+"answer": "1"
+},
+{
+"question": "Which of these is not a valid assignment?",
+"options": \["x, y = 1, 2", "x = y = 3", "x == 4", "x = 5"],
+"answer": "x == 4"
+},
+{
+"question": "What is the type of 5 / 2?",
+"options": \["int", "float", "decimal", "Error"],
+"answer": "float"
+},
+{
+"question": "What does \~5 return?",
+"options": \["-5", "-6", "5", "Error"],
+"answer": "-6"
+},
+{
+"question": "What is the result of divmod(7, 3)?",
+"options": \["(2, 1)", "(3, 1)", "(2, 2)", "Error"],
+"answer": "(2, 1)"
+},
+{
+"question": "If x=5 and y=10, what does (x\<y) and (y<20) evaluate to?",
+"options": \["True", "False", "None", "Error"],
+"answer": "True"
+},
+{
+"question": "Which operator returns the memory address identity?",
+"options": \["==", "is", "&", "id"],
+"answer": "is"
+},
+{
+"question": "What is the result of: 2 \*\* 3 \*\* 2?",
+"options": \["64", "512", "16", "Error"],
+"answer": "512"
+},
+{
+"question": "Which assignment is valid?",
+"options": \["1x = 5", "\_y = 10", "my-var = 3", "def = 2"],
+"answer": "\_y = 10"
+},
+{
+"question": "Which operator has lower precedence than logical 'and'?",
+"options": \["or", "not", "==", "+"],
+"answer": "or"
+},
+{
+"question": "Which function is used to find the length of a string?",
+"options": \["count()", "len()", "length()", "size()"],
+"answer": "len()"
+},
+{
+"question": "What will 'hello' + 'world' output?",
+"options": \["hello world", "helloworld", "Error", "hello+world"],
+"answer": "helloworld"
+},
+{
+"question": "Which method converts string to uppercase?",
+"options": \["upper()", "uppercase()", "toUpper()", "UPPER()"],
+"answer": "upper()"
+},
+{
+"question": "How do you access first character of string s?",
+"options": \["s\[1]", "s\[0]", "s\[-1]", "s.first()"],
+"answer": "s\[0]"
+},
+{
+"question": "Which operator repeats a string?",
+"options": \["*", "+", "-", "%"],
+"answer": "*"
+},
+{
+"question": "What is 'Python'\[1:4]?",
+"options": \["yth", "ytho", "Pyt", "hon"],
+"answer": "yth"
+},
+{
+"question": "Which method checks if string starts with prefix?",
+"options": \["startswith()", "endswith()", "start()", "prefix()"],
+"answer": "startswith()"
+},
+{
+"question": "What will 'abc'.find('b') return?",
+"options": \["1", "0", "-1", "Error"],
+"answer": "1"
+},
+{
+"question": "What is the result of 'a' \* 3?",
+"options": \["aaa", "a3", "Error", "3a"],
+"answer": "aaa"
+},
+{
+"question": "What is 'Hello'.lower()?",
+"options": \["HELLO", "hello", "Hello", "Error"],
+"answer": "hello"
+},
+{
+"question": "'Python'\[::-1] gives?",
+"options": \["nohtyP", "Python", "Error", "None"],
+"answer": "nohtyP"
+},
+{
+"question": "Which string method removes whitespace?",
+"options": \["trim()", "strip()", "remove()", "rstrip()"],
+"answer": "strip()"
+},
+{
+"question": "What is '123'.isdigit()?",
+"options": \["True", "False", "Error", "None"],
+"answer": "True"
+},
+{
+"question": "What does '{} {}'.format('a','b') return?",
+"options": \["a b", "ab", "b a", "Error"],
+"answer": "a b"
+},
+{
+"question": "f"{2+3}" evaluates to?",
+"options": \["5", "23", "Error", "None"],
+"answer": "5"
+},
+{
+"question": "Which operator is invalid on strings?",
+"options": \["+", "*", "-", "in"],
+"answer": "-"
+},
+{
+"question": "'Python'.replace('P','J')?",
+"options": \["Jython", "Python", "Pthon", "Error"],
+"answer": "Jython"
+},
+{
+"question": "'a' in 'cat' returns?",
+"options": \["True", "False", "None", "Error"],
+"answer": "True"
+},
+{
+"question": "Which string method splits into list?",
+"options": \["split()", "slice()", "list()", "cut()"],
+"answer": "split()"
+},
+{
+"question": "What does ''.join(\['a','b','c']) return?",
+"options": \["abc", "a b c", "\['a','b','c']", "Error"],
+"answer": "abc"
+},
+    [
+  {
+    "question": "What will be the output of: x = [1,2,3]; print(x[1])?",
+    "options": ["1", "2", "3", "Error"],
+    "answer": "2"
+  },
+  {
+    "question": "Which of the following is immutable?",
+    "options": ["List", "Tuple", "Dictionary", "Set"],
+    "answer": "Tuple"
+  },
+  {
+    "question": "What is the result of len((1,2,3,4))?",
+    "options": ["3", "4", "5", "Error"],
+    "answer": "4"
+  },
+  {
+    "question": "Which operator is used to check membership in lists?",
+    "options": ["in", "==", "is", "contains"],
+    "answer": "in"
+  },
+  {
+    "question": "What is the output of: (1,2) + (3,4)?",
+    "options": ["(1,2,3,4)", "(1,2)(3,4)", "Error", "[1,2,3,4]"],
+    "answer": "(1,2,3,4)"
+  },
+  {
+    "question": "What does the following evaluate to: if []: print('Yes') else: print('No')?",
+    "options": ["Yes", "No", "Error", "None"],
+    "answer": "No"
+  },
+  {
+    "question": "Which keyword is used to exit a loop?",
+    "options": ["exit", "stop", "break", "return"],
+    "answer": "break"
+  },
+  {
+    "question": "What will be the output: for i in range(3): print(i, end=' ')?",
+    "options": ["0 1 2", "1 2 3", "0 1 2 3", "Error"],
+    "answer": "0 1 2"
+  },
+  {
+    "question": "Which operator is used for logical AND in Python?",
+    "options": ["&&", "&", "and", "AND"],
+    "answer": "and"
+  },
+  {
+    "question": "What is the output: if 5 > 2: print('A') else: print('B')?",
+    "options": ["A", "B", "Error", "None"],
+    "answer": "A"
+  },
+  {
+    "question": "Which of the following creates an empty dictionary?",
+    "options": ["{}", "[]", "dict()", "()"],
+    "answer": "dict()"
+  },
+  {
+    "question": "What is the key type allowed in a dictionary?",
+    "options": ["Mutable", "Immutable", "List", "Dictionary"],
+    "answer": "Immutable"
+  },
+  {
+    "question": "How do you access the value of key 'a' in d = {'a':10, 'b':20}?",
+    "options": ["d['a']", "d(a)", "d.get('a')", "Both d['a'] and d.get('a')"],
+    "answer": "Both d['a'] and d.get('a')"
+  },
+  {
+    "question": "Which method removes a key from a dictionary?",
+    "options": ["remove()", "delete()", "pop()", "clear()"],
+    "answer": "pop()"
+  },
+  {
+    "question": "What is the result of len({'x':1,'y':2,'z':3})?",
+    "options": ["2", "3", "4", "Error"],
+    "answer": "3"
+  },
+  {
+    "question": "Which keyword is used to define a function in Python?",
+    "options": ["function", "def", "fun", "define"],
+    "answer": "def"
+  },
+  {
+    "question": "What is the output: def f(): return 5; print(f())?",
+    "options": ["f", "5", "None", "Error"],
+    "answer": "5"
+  },
+  {
+    "question": "What is the default return type of a function that does not explicitly return a value?",
+    "options": ["0", "None", "Empty string", "Error"],
+    "answer": "None"
+  },
+  {
+    "question": "What will be the output: def add(a,b=2): return a+b; print(add(3))?",
+    "options": ["3", "5", "2", "Error"],
+    "answer": "5"
+  },
+  {
+    "question": "Which keyword is used for anonymous functions?",
+    "options": ["def", "lambda", "fun", "return"],
+    "answer": "lambda"
+  },
+  {
+    "question": "What will the output be: list(map(lambda x: x+1, [1,2,3]))?",
+    "options": ["[2,3,4]", "[1,2,3]", "[0,1,2]", "Error"],
+    "answer": "[2,3,4]"
+  },
+  {
+    "question": "Which function applies a condition to filter elements?",
+    "options": ["map()", "reduce()", "filter()", "lambda()"],
+    "answer": "filter()"
+  },
+  {
+    "question": "What will be the output: from functools import reduce; print(reduce(lambda x,y:x+y,[1,2,3]))?",
+    "options": ["1", "6", "Error", "123"],
+    "answer": "6"
+  },
+  {
+    "question": "Which function is used to apply transformation to all items in an iterable?",
+    "options": ["map()", "filter()", "reduce()", "lambda()"],
+    "answer": "map()"
+  },
+  {
+    "question": "What is required to use reduce() in Python 3?",
+    "options": ["No import", "import reduce", "from functools import reduce", "reduce is not available"],
+    "answer": "from functools import reduce"
+  },
+  {
+    "question": "What will the output be: [x*x for x in [1,2,3]]?",
+    "options": ["[1,4,9]", "[1,2,3]", "[2,4,6]", "Error"],
+    "answer": "[1,4,9]"
+  },
+  {
+    "question": "Which of the following creates a set?",
+    "options": ["{1,2,3}", "[1,2,3]", "(1,2,3)", "{[1,2]}"],
+    "answer": "{1,2,3}"
+  },
+  {
+    "question": "What is the output: len(set([1,2,2,3]))?",
+    "options": ["2", "3", "4", "Error"],
+    "answer": "3"
+  },
+  {
+    "question": "Which operator is used for set union?",
+    "options": ["|", "&", "-", "+"],
+    "answer": "|"
+  },
+  {
+    "question": "What is the result of {1,2} & {2,3}?",
+    "options": ["{1,2,3}", "{2}", "{1}", "Error"],
+    "answer": "{2}"
+  },
+  {
+    "question": "What will be the output: sorted([3,1,2])?",
+    "options": ["[1,2,3]", "[3,2,1]", "[2,3,1]", "Error"],
+    "answer": "[1,2,3]"
+  },
+  {
+    "question": "Which parameter reverses the sorting order in sorted()?",
+    "options": ["reverse", "rev", "desc", "flip"],
+    "answer": "reverse"
+  },
+  {
+    "question": "What is the type returned by sorted()?",
+    "options": ["List", "Tuple", "Set", "Dict"],
+    "answer": "List"
+  },
+  {
+    "question": "What will be the output: sorted(['b','a','c'])?",
+    "options": ["['a','b','c']", "['c','b','a']", "['b','a','c']", "Error"],
+    "answer": "['a','b','c']"
+  },
+  {
+    "question": "What is the result: sorted([10,2,30], key=lambda x: str(x))?",
+    "options": ["[10,2,30]", "[2,10,30]", "[10,30,2]", "[30,10,2]"],
+    "answer": "[10,2,30]"
+  },
+  {
+    "question": "Which keyword is used to define a class?",
+    "options": ["def", "class", "struct", "object"],
+    "answer": "class"
+  },
+  {
+    "question": "What is the output: class A: pass; obj=A(); print(isinstance(obj,A))?",
+    "options": ["True", "False", "Error", "None"],
+    "answer": "True"
+  },
+  {
+    "question": "What is the first argument of instance methods in a class?",
+    "options": ["self", "cls", "this", "obj"],
+    "answer": "self"
+  },
+  {
+    "question": "Which method initializes objects in Python?",
+    "options": ["__start__", "__init__", "__create__", "constructor"],
+    "answer": "__init__"
+  },
+  {
+    "question": "Which keyword is used to create an object?",
+    "options": ["object", "self", "new", "className()"],
+    "answer": "className()"
+  },
+  {
+    "question": "What is inheritance in Python?",
+    "options": ["Copying code", "Using one class inside another", "Deriving one class from another", "Defining multiple classes"],
+    "answer": "Deriving one class from another"
+  },
+  {
+    "question": "Which function checks subclass relationship?",
+    "options": ["issubclass()", "isinstance()", "type()", "subclassof()"],
+    "answer": "issubclass()"
+  },
+  {
+    "question": "What is the output: class A: pass; class B(A): pass; print(issubclass(B,A))?",
+    "options": ["True", "False", "Error", "None"],
+    "answer": "True"
+  },
+  {
+    "question": "Which function can call parent class method?",
+    "options": ["base()", "super()", "parent()", "self()"],
+    "answer": "super()"
+  },
+  {
+    "question": "What type of inheritance is supported in Python?",
+    "options": ["Single", "Multiple", "Multilevel", "All of these"],
+    "answer": "All of these"
+  },
+  {
+    "question": "Which keyword is used to open a file?",
+    "options": ["file()", "open()", "with()", "read()"],
+    "answer": "open()"
+  },
+  {
+    "question": "What mode is used to append to a file?",
+    "options": ["w", "a", "r", "x"],
+    "answer": "a"
+  },
+  {
+    "question": "Which exception is raised when dividing by zero?",
+    "options": ["ZeroDivisionError", "ValueError", "TypeError", "KeyError"],
+    "answer": "ZeroDivisionError"
+  },
+  {
+    "question": "Which block is always executed in exception handling?",
+    "options": ["try", "except", "finally", "else"],
+    "answer": "finally"
+  },
+  {
+    "question": "Which keyword is used to handle exceptions?",
+    "options": ["try", "except", "catch", "throw"],
+    "answer": "except"
+  }
+]
+    
+// ... 60 more questions for Lists/Tuples, Conditions/Loops, Dictionary, Function
